@@ -4,13 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="reset.css">
     <script src="main.js" defer></script>
     <title>Calculadora</title>
 </head>
 
 <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Krona+One&family=Orbitron:wght@600&display=swap');
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #164B60 0%, #1B6B93 100%);
+    min-height: 100vh;
+
+}
+
+.titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-decoration: underline;
+
+}
+
+.calculadora {
+    background: linear-gradient(to bottom, #0A2647 0%, #144272 100%);
+    border: 3px solid black;
+    box-shadow: 6px 7px 7px black, 10px 10px 10px #000, inset 0 0 0 2px #164B60, inset 0 0 0 10px #000;
+    border-radius: 30px;
+
+    padding: 45px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.calculadora_display {
+    background-color: red;
+    border: 1px solid black;
+
+    margin-bottom: 40px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.calculadora_display_label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    font-weight: bold;   
+    margin-right: 20px; 
+
+}
+
+.calculadora_teclado {
+    background-color: #00000069;
+    border-radius: 10px;
+    display: grid;
+    padding: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.tecla {
+    background-color: #594f96;
+    border: 1px solid #1b1430;
+    color: #1b1430;
+    cursor: pointer;
+    padding: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+
+}
+
+.tecla:hover {
+    background-color: #22109691;
+    cursor: pointer;
+    transform: scale(1.05);
+    color: white;
+
+}
+
+.tecla:active {
+    transform: scale(1.025);
+
+}
+
+
+
+.tecla_mais,
+.tecla_menos,
+.tecla_vezes,
+.tecla_divide,
+.tecla_igual,
+.tecla_apaga,
+.tecla_potencia,
+.tecla_decimal,
+.tecla_raiz {
+    background-color: #271f3d;
+    color: #594f96;
+}
+
+.tecla_numero0 {
+    grid-column: 2;
+    grid-row: 4;
+
+}
+
+.tecla_mais {
+    grid-column: 4;
+    grid-row: 1;
+
+}
+
+.tecla_menos {
+    grid-column: 4;
+    grid-row: 2;
+
+}
+
+.tecla_numero7 {
+    border-radius: 10px 0 0 0;
+
+}
+
+.tecla_vezes {
+    grid-column: 5;
+    grid-row: 1;
+
+    border-radius: 0 10px 0 0;
+
+}
+
+.tecla_divide {
+    grid-column: 5;
+    grid-row: 2;
+
+}
+
+.tecla_igual {
+    grid-column: 4 / 6;
+    grid-row: 4;
+
+    border-radius: 0 0 10px 0;
+
+}
+
+.tecla_decimal {
+    grid-column: 3;
+    grid-row: 4;
+
+}
+
+.tecla_apaga {
+    grid-column: 1;
+    grid-row: 4;
+
+    border-radius: 0 0 0 10px;
+
+}
+    </style>
     <h1 class="titulo">Calculadora</h1>
     <div class="calculadora">
         <div class="calculadora_display">        
