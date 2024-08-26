@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js" defer></script>
     <title>Calculadora</title>
 </head>
 
@@ -206,6 +205,21 @@ body {
             <button class="tecla tecla_igual">=</button>
         </div>        
     </div>
+    <script>
+        
+const calculadora = document.querySelector('.calculadora');
+const teclado = calculadora.querySelector('.calculadora_teclado');
+
+const teclas = calculadora.querySelectorAll('.tecla');
+
+const display = calculadora.querySelector('.calculadora_display_label');
+
+teclado.addEventListener('click', function(e) {
+    if (e.target.matches('button')) {
+      console.log(e);
+    }
+   })
+    </script>
 </body>
 
 </html>
